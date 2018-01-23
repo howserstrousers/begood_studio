@@ -5,13 +5,13 @@
 
 {% if maxPage > 1 %}
 
-<ul>
+<ul class="pagination">
 
   {% if curPage > 1 %}
-  <li><a href="{{ getPageUrl(curPage - 1) }}">&laquo;</a></li>
+  <li><a href="{{ getPageUrl(curPage - 1) }}">prev</a></li>
   {% endif %}
 
-  <li {% if curPage == 1%}class="active"{% endif %}><a href="{{ getPageUrl(1) }}">1</a></li>
+  <li><a href="{{ getPageUrl(1) }}">1</a></li>
 
   {% if curPage > 4 %}
     <li>...</li>
@@ -25,7 +25,7 @@
   {% endif %}
 
   {% if curPage != 1 && curPage != maxPage %}
-  <li class="active"><a href="{{ getPageUrl(curPage) }}">{{ curPage }}</a></li>
+  <li><a href="{{ getPageUrl(curPage) }}">{{ curPage }}</a></li>
   {% endif %}
 
   {% if curPage < maxPage - 1 %}
@@ -39,10 +39,10 @@
     <li>...</li>
   {% endif %}
 
-  <li {% if curPage == maxPage %}class="active"{% endif %}><a href="{{ getPageUrl(maxPage) }}">{{maxPage}}</a></li>
+  <li><a href="{{ getPageUrl(maxPage) }}">{{maxPage}}</a></li>
 
   {% if curPage < maxPage %}
-  <li><a href="{{ getPageUrl(curPage + 1) }}">&raquo;</a></li>
+  <li><a href="{{ getPageUrl(curPage + 1) }}">next</a></li>
   {% endif %}
 
 

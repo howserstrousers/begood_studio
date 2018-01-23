@@ -27,8 +27,8 @@
     <meta name="description" content="{% block description %}{{ site_description|default('Built with Webhook.') }}{% endblock %}">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="shortcut icon" href="/static/images/favicon.png">
-    <link rel="apple-touch-icon" href="/static/images/touch-icon.png">
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="apple-touch-icon icon-precomposed" href="/static/images/apple-touch-icon.png"/>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
 
@@ -36,39 +36,34 @@
     {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
     <!-- build:css /static/css/minified.css -->
-    <link rel="stylesheet" href="/static/css/main.css"/>
+    <link rel="stylesheet" href="/static/css/app.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
     {# Useful block for loading outside scripts in other pages. #}
     {% block head_extra %}{% endblock %}
   </head>
-  <body {% block body_attributes %}{% endblock %}>
+  <body>
     {% block body %}
       <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
       <![endif]-->
 
-      {% block header %}
-        {% include "templates/partials/header.html" %}
-      {% endblock %}
+      {% include "templates/partials/header.html" %}
 
       {# By default, your inner pages will load into this block. #}
       {% block content %}{% endblock %}
 
-      {% block footer %}
-        {% include "templates/partials/footer.html" %}
-      {% endblock %}
+      {% include "templates/partials/footer.html" %}
 
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      {# Foundation JS #}
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
       {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
       {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
       <!-- build:js /static/javascript/minified.js -->
-      <script src="/static/javascript/main.js"></script>
+        <script src="/static/javascript/bootstrap/bootstrap.js"></script>
       <!-- endbuild -->
 
       {% block scripts_extra %}{% endblock %}
@@ -83,3 +78,4 @@
     {% endblock %}
   </body>
 </html>
+
