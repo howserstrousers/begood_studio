@@ -1,5 +1,1 @@
 var tipuesearch = {"pages": [
-{"title":"Webhook","text":"","tags":"","loc":"/cms/"},
-{"title":"Webhook site - Homepage","text":"Hello Boostrap!\n\n        \n          This theme installed Bootstrap's 3.3.1 source LESS and Javascript files.\n          It also set up some Grunt watch commands to build CSS from the less folder as you build.\n          You'll need to restart your local server to get it to operate properly.\n        \n\n        If you need to update boostrap.\n\n        \n          Open your terminal and navigate to this site's directory\n          Run npm install -g bower\n          Run bower update\n          Run grunt copy\n        \n\n        \n\n        This is your homepage, located at /pages/index.html.\n\n        Looking for the CMS?","tags":"","loc":"/"},
-{"title":"Webhook site","text":"","tags":"","loc":"/search-results/"},
-]}
